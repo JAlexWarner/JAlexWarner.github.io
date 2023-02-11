@@ -32,13 +32,13 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   flex: 1 1 auto;
 }
 
 .nav-links li{
   padding: 0px 0px 1rem 0px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .nav-links li a{
@@ -61,14 +61,14 @@
 
 .nav-link {
   display: flex;
-  border: 2px dashed purple;
+  /* border: 2px dashed purple; */
   height: 2rem;
   align-items: center;
   transition: width 1000ms ease;
 }
 
 .nav-link i {
-  border: 5px dashed brown;
+  /* border: 5px dashed brown; */
 }
 
 .link-text {

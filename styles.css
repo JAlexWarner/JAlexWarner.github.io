@@ -17,6 +17,10 @@
     to { opacity: 1; }
 }
 
+/*
+fade and slide at different intervals
+*/
+
 body {
   margin: 0;
   font-family: "LeagueSpartan-Bold", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -25,7 +29,7 @@ body {
 }
 
 .dark-mode {
-  background-color: black;
+  background-color: #262626;
   color: white;
 }
 

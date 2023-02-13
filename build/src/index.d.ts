@@ -1,3 +1,4 @@
 declare function toggleDark(): void;
-declare function startDarkMode(): void;
-declare function startLightMode(): void;
+declare const boxicon_link: HTMLLinkElement;
+declare const arrangement_link: HTMLLinkElement;
+declare const styles_link: HTMLLinkElement;

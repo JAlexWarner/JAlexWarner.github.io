@@ -4,12 +4,15 @@
   width: 5rem;
   background-color: #2EB0A5;
   text-align: center;
-  transition: width 1000ms ease;
+  transition: width 3s ease;
   display: flex;
   flex-direction: column;
   padding: 0px 10px;
   overflow: hidden;
+  z-index: 999;
 }
+
+/* mess with intervals here on transitions */
 
 .nav-bar:hover {
   width: 12.5rem;
@@ -32,9 +35,14 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid orange; */
+  border: 1px solid orange;
   flex: 1 1 auto;
 }
+
+/*
+do some wacky shit with translate (animation)
+translate to where 
+*/
 
 .nav-links li{
   padding: 0px 0px 1rem 0px;
@@ -64,11 +72,7 @@
   /* border: 2px dashed purple; */
   height: 2rem;
   align-items: center;
-  transition: width 1000ms ease;
-}
-
-.nav-link i {
-  /* border: 5px dashed brown; */
+  transition: width 5s ease;
 }
 
 .link-text {
@@ -93,3 +97,7 @@
   align-items: center;
   justify-content: center;
 }
+
+/* generic (common margins, font, etc)
+css file for each component?
+*/

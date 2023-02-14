@@ -4,7 +4,7 @@
   width: 5rem;
   background-color: #2EB0A5;
   text-align: center;
-  transition: width 3s ease;
+  transition: width 1s ease;
   display: flex;
   flex-direction: column;
   padding: 0px 10px;
@@ -20,8 +20,8 @@
 
 .nav-bar:hover .link-text {
   display: block;
-  -webkit-animation: fadeIn 1.2s;
-  animation: fadeIn 1.2s;
+  -webkit-animation: fadeIn 1.75s;
+  animation: fadeIn 1.75s;
 }
 
 .nav-bar:not(:hover) .nav-links li {
@@ -54,7 +54,7 @@ translate to where
   line-height: 1rem;
   text-decoration: none;
   color: inherit;
-  border: 1px solid teal;
+  /* border: 1px solid teal; */
 }
 
 .nav-item:last-child {
@@ -73,7 +73,7 @@ translate to where
   /* border: 2px dashed purple; */
   height: 2rem;
   align-items: center;
-  transition: width 5s ease;
+  transition: width 1s ease;
 }
 
 .link-text {

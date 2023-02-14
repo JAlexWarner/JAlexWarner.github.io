@@ -9,10 +9,6 @@ function toggleDark() {
   document.body.classList.toggle("dark-mode");
 }
 
-// function startDarkMode() {
-//   document.body.classList.add("dark-mode");
-// }
-
 const boxicon_link = document.createElement('link');
 boxicon_link.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css';
 boxicon_link.rel = 'stylesheet';
@@ -98,3 +94,6 @@ function build_text(textElement: Element) {
       }
 }
 }
+
+// var spanWidth = document.querySelector('#text span').width();
+// document.querySelector('#text').animate( { width: spanWidth }, 6000 );

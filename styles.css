@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  --transition-speed: 600ms;
+  --transition-speed: 250ms;
 }
 
 @font-face {

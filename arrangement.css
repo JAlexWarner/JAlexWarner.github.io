@@ -15,7 +15,7 @@
 /* mess with intervals here on transitions */
 
 .nav-bar:hover {
-  width: 12.5rem;
+  width: 11rem;
 }
 
 .nav-bar:hover .link-text {
@@ -35,12 +35,12 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   flex: 1 1 auto;
 }
 
 /*
-do some wacky shit with translate (animation)
+do some wacky stuff with translate (animation)
 translate to where 
 */
 
@@ -54,6 +54,7 @@ translate to where
   line-height: 1rem;
   text-decoration: none;
   color: inherit;
+  border: 1px solid teal;
 }
 
 .nav-item:last-child {

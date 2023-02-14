@@ -39,4 +39,23 @@ fetch('nav.html')
         }
     }
 });
+fetch("common_header.html")
+    .then(res => res.text())
+    .then(text => {
+    let oldelem = document.getElementById("replace-with-header");
+    let newelem = document.createElement("div");
+    newelem.innerHTML = text;
+    newelem.style.paddingBottom = "20px";
+    if (oldelem == null) {
+        throw Error("Couldn't find element with 'replace-with-header' id");
+    }
+    else {
+        if (oldelem.parentNode == null) {
+            throw Error("Couldn't find parentNode of element with 'replace-with-header' id");
+        }
+        else {
+            oldelem.parentNode.replaceChild(newelem, oldelem);
+        }
+    }
+});
 //# sourceMappingURL=index.js.map

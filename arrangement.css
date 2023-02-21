@@ -33,7 +33,7 @@
 }
 
 .nav-bar:hover {
-  width: 11.5rem;
+  width: 12rem;
 }
 
 .nav-bar:not(:hover) .nav-links li {
@@ -105,8 +105,8 @@
   flex-shrink: 0;
   flex-grow: 0;
   transition: flex-basis var(--slower-speed) ease;
-  /* -webkit-animation: fadeIn var(--slower-speed) linear;
-  animation: fadeIn var(--slower-speed) linear ; */
+  -webkit-animation: fadeIn var(--slower-speed) linear;
+  animation: fadeIn var(--slower-speed) linear ;
   opacity: 1;
   display: flex;
 }
@@ -126,12 +126,21 @@
   display: grid;
   height: 175px;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .main-grid-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* border: 1px solid indianred; */
+}
+
+.links-info {
+  display: grid;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-rows: min-content auto;
+  padding: 0rem 2rem;
 }
 
 /* https://jsfiddle.net/p0Lygk37/1/ For learning event handlers */

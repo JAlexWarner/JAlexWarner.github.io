@@ -1,0 +1,39 @@
+// var spanWidth = document.querySelector('#text span').width();
+// document.querySelector('#text').animate( { width: spanWidth }, 6000 );
+
+We don't need JQuery or even Javascript to make the link text grow when then the navigation bar is hovered
+
+function build_text(textElement: Element) {
+    const full_word = textElement.textContent;
+    
+    if (full_word == null) {
+      throw Error("word is null")
+    }
+    else {
+      textElement.textContent = "";
+      for (var i=0; i< full_word.length; i++) {
+      textElement.textContent = textElement.textContent + full_word[0]
+      }
+}
+}
+
+We especially don't need Event Listeners when something is simple.
+Maybe we'll find a use for it somewhere else. Perhaps when we do the card sliders?
+
+document.querySelectorAll(".growing-text").forEach(item => {
+  item.addEventListener("mouseover", function(){
+    build_text(item)
+  })
+})
+
+const textAddEvent = new Event("textAdd", {
+  bubbles: false,
+  cancelable: true,
+  composed: false
+})
+
+var nav_bar_element = document.querySelector(".nav-bar");
+
+What we wanted to do above was grow the link text letter by letter.
+
+Let's leave a 1px or 5px border when we're testing something that affects dimensions

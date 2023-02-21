@@ -1,27 +1,39 @@
+/* Large Screens Start */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Large Screens End */
+
+
+
+/* Small Screens Start */
+@media only screen and (max-width: 600px) {
+
+}
+/* Small Screens End */
+
+
+
+
+/* ##### NAVIGATION BAR ##### */
+
 .nav-bar {
   position: fixed;
   height: 100%;
   width: 5rem;
   background-color: #2EB0A5;
   text-align: center;
-  transition: width 1s ease;
+  transition: width var(--slower-speed) ease;
   display: flex;
   flex-direction: column;
-  padding: 0px 10px;
+  padding: 0 .625rem;
   overflow: hidden;
   z-index: 999;
 }
 
-/* mess with intervals here on transitions */
-
 .nav-bar:hover {
-  width: 11rem;
-}
-
-.nav-bar:hover .link-text {
-  display: block;
-  -webkit-animation: fadeIn 1.75s;
-  animation: fadeIn 1.75s;
+  width: 11.5rem;
 }
 
 .nav-bar:not(:hover) .nav-links li {
@@ -29,20 +41,15 @@
 }
 
 .nav-links {
+  /* border: 1px solid orange; */
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: left;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid orange; */
   flex: 1 1 auto;
 }
-
-/*
-do some wacky stuff with translate (animation)
-translate to where 
-*/
 
 .nav-links li{
   padding: 0px 0px 1rem 0px;
@@ -50,11 +57,11 @@ translate to where
 }
 
 .nav-links li a{
+  /* border: 1px solid black; */
   padding: 0px .5rem 0px .5rem;
   line-height: 1rem;
   text-decoration: none;
   color: inherit;
-  /* border: 1px solid teal; */
 }
 
 .nav-item:last-child {
@@ -64,32 +71,60 @@ translate to where
   margin-top: auto;
 }
 
-.nav-bar:not(:hover) .nav-link {
-  justify-content: center;
-}
-
 .nav-link {
   display: flex;
+  flex-direction: row;
   /* border: 2px dashed purple; */
   height: 2rem;
   align-items: center;
-  transition: width 1s ease;
+}
+
+.link-icon {
+  /* border: 1px solid white; */
+  flex: 3.75rem 0 0;
 }
 
 .link-text {
-  display: none;
-  margin-left: 1rem;
+  /* border: 1.5px solid red;0 */
+  display: flex;
   white-space: nowrap;
+  overflow: hidden;
+  line-height: 1;
+  flex-basis: 0rem; 
+  flex-shrink: 0 ;
+  flex-grow: 0;
+  transition: flex-basis var(--slower-speed) ease;
+  height: 1.5rem;
+  padding: .375rem 0 0 0;
+  align-items: center;
+  text-align: left;
 }
+
+.nav-bar:hover .link-text {
+  flex-basis: 7.5rem; 
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: flex-basis var(--slower-speed) ease;
+  /* -webkit-animation: fadeIn var(--slower-speed) linear;
+  animation: fadeIn var(--slower-speed) linear ; */
+  opacity: 1;
+  display: flex;
+}
+
+.nav-bar:hover .link-icon {
+  text-align: center;
+}
+
+/* ##### MAIN INFO ##### */
 
 .main_info {
   margin-left: 5rem;
-  padding: 20px;
+  padding: 5rem 10rem 0 10rem;
 }
 
 .main-grid-container {
   display: grid;
-  height: 200px;
+  height: 175px;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -99,6 +134,5 @@ translate to where
   justify-content: center;
 }
 
-/* generic (common margins, font, etc)
-css file for each component?
-*/
+/* https://jsfiddle.net/p0Lygk37/1/ For learning event handlers */
+/* $0.getBoundingClientRect() */

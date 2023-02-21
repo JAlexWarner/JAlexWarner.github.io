@@ -6,9 +6,6 @@ let link_text_lengths = link_text_array.map(x => x.textContent ? x.textContent.l
 function toggleDark() {
     document.body.classList.toggle("dark-mode");
 }
-// function startDarkMode() {
-//   document.body.classList.add("dark-mode");
-// }
 const boxicon_link = document.createElement('link');
 boxicon_link.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css';
 boxicon_link.rel = 'stylesheet';
@@ -59,27 +56,4 @@ fetch("common_header.html")
         }
     }
 });
-const textAddEvent = new Event("textAdd", {
-    bubbles: false,
-    cancelable: true,
-    composed: false
-});
-var nav_bar_element = document.querySelector(".nav-bar");
-document.querySelectorAll(".growing-text").forEach(item => {
-    item.addEventListener("mouseover", function () {
-        build_text(item);
-    });
-});
-function build_text(textElement) {
-    const full_word = textElement.textContent;
-    if (full_word == null) {
-        throw Error("word is null");
-    }
-    else {
-        textElement.textContent = "";
-        for (var i = 0; i < full_word.length; i++) {
-            textElement.textContent = textElement.textContent + full_word[0];
-        }
-    }
-}
 //# sourceMappingURL=index.js.map

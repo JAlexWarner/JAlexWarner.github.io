@@ -1,7 +1,5 @@
 // NOTE: Look more into ARIA when we feel confident in all the tabs
 
-// Let's get the longest text in the link text strings
-
 let link_text_array = Array.from(document.querySelectorAll("link-text"));
 let link_text_lengths = link_text_array.map(x => x.textContent? x.textContent.length : 0);
 
@@ -66,34 +64,3 @@ fetch("common_header.html")
     }
   }
 })
-
-const textAddEvent = new Event("textAdd", {
-  bubbles: false,
-  cancelable: true,
-  composed: false
-})
-
-var nav_bar_element = document.querySelector(".nav-bar");
-
-document.querySelectorAll(".growing-text").forEach(item => {
-  item.addEventListener("mouseover", function(){
-    build_text(item)
-  })
-})
-
-function build_text(textElement: Element) {
-    const full_word = textElement.textContent;
-    
-    if (full_word == null) {
-      throw Error("word is null")
-    }
-    else {
-      textElement.textContent = "";
-      for (var i=0; i< full_word.length; i++) {
-      textElement.textContent = textElement.textContent + full_word[0]
-      }
-}
-}
-
-// var spanWidth = document.querySelector('#text span').width();
-// document.querySelector('#text').animate( { width: spanWidth }, 6000 );

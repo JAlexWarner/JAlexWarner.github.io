@@ -1,6 +1,5 @@
 "use strict";
 // NOTE: Look more into ARIA when we feel confident in all the tabs
-// Let's get the longest text in the link text strings
 let link_text_array = Array.from(document.querySelectorAll("link-text"));
 let link_text_lengths = link_text_array.map(x => x.textContent ? x.textContent.length : 0);
 function toggleDark() {
@@ -56,4 +55,10 @@ fetch("common_header.html")
         }
     }
 });
+// if (window.matchMedia("only screen and (max-width: 600px)")){
+//   console.log("Great Success");
+//   var toggle_elem = document.getElementById("toggle-icon")
+//   toggle_elem?.classList.replace("bx-lg", "bx-sm");
+//   console.log(toggle_elem);
+// }
 //# sourceMappingURL=index.js.map

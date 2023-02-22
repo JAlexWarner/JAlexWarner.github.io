@@ -64,3 +64,10 @@ fetch("common_header.html")
     }
   }
 })
+
+// if (window.matchMedia("only screen and (max-width: 600px)")){
+//   console.log("Great Success");
+//   var toggle_elem = document.getElementById("toggle-icon")
+//   toggle_elem?.classList.replace("bx-lg", "bx-sm");
+//   console.log(toggle_elem);
+// }

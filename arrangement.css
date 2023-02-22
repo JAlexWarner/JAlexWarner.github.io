@@ -1,39 +1,39 @@
+/* ##### NAVIGATION BAR ##### */
+.nav-bar {
+  background-color: #2EB0A5;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.nav-bar:hover .link-icon {
+  text-align: center;
+}
+
+.nav-links {
+  list-style-type: none;
+}
+
+#about-section {
+  margin-bottom: 5rem;
+  /* height: 30rem; 
+  width: 60rem;  */
+}
+
 /* Large Screens Start */
 @media only screen and (min-width: 600px) {
-
-}
-
-/* Large Screens End */
-
-
-
-/* Small Screens Start */
-@media only screen and (max-width: 600px) {
-
-}
-/* Small Screens End */
-
-
-
-
-/* ##### NAVIGATION BAR ##### */
-
 .nav-bar {
   position: fixed;
   height: 100%;
-  width: 5rem;
-  background-color: #2EB0A5;
+  width: var(--initial-nav-size);
   text-align: center;
   transition: width var(--slower-speed) ease;
   display: flex;
   flex-direction: column;
   padding: 0 .625rem;
-  overflow: hidden;
-  z-index: 999;
 }
 
 .nav-bar:hover {
-  width: 12rem;
+  width: 13rem;
 }
 
 .nav-bar:not(:hover) .nav-links li {
@@ -42,7 +42,6 @@
 
 .nav-links {
   /* border: 1px solid orange; */
-  list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -52,8 +51,8 @@
 }
 
 .nav-links li{
-  padding: 0px 0px 1rem 0px;
   /* border: 1px solid blue; */
+  padding: 0px 0px 1rem 0px;
 }
 
 .nav-links li a{
@@ -72,11 +71,21 @@
 }
 
 .nav-link {
+  /* border: 2px dashed purple; */
   display: flex;
   flex-direction: row;
-  /* border: 2px dashed purple; */
   height: 2rem;
   align-items: center;
+}
+
+.nav-bar:hover .link-text {
+  flex-basis: 7.5rem; 
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: flex-basis var(--slower-speed) ease;
+  -webkit-animation: fadeIn var(--slower-speed) linear;
+  animation: fadeIn var(--slower-speed) linear ;
+  display: flex;
 }
 
 .link-icon {
@@ -100,31 +109,18 @@
   text-align: left;
 }
 
-.nav-bar:hover .link-text {
-  flex-basis: 7.5rem; 
-  flex-shrink: 0;
-  flex-grow: 0;
-  transition: flex-basis var(--slower-speed) ease;
-  -webkit-animation: fadeIn var(--slower-speed) linear;
-  animation: fadeIn var(--slower-speed) linear ;
-  opacity: 1;
-  display: flex;
-}
-
-.nav-bar:hover .link-icon {
-  text-align: center;
-}
-
-/* ##### MAIN INFO ##### */
-
 .main_info {
   margin-left: 5rem;
   padding: 5rem 10rem 0 10rem;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .main-grid-container {
   display: grid;
-  height: 175px;
+  height: 10rem;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
@@ -142,6 +138,69 @@
   grid-template-rows: min-content auto;
   padding: 0rem 2rem;
 }
+}
+/* Large Screens End */
 
-/* https://jsfiddle.net/p0Lygk37/1/ For learning event handlers */
-/* $0.getBoundingClientRect() */
+/* Small Screens Start */
+@media only screen and (max-width: 600px) {
+#initials {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.nav-bar {
+  position: fixed;
+  overflow: hidden;
+  bottom: 0;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  width: 100%;
+  align-items: center;
+  padding: 0.625rem 1rem 0 1rem;
+}
+
+.nav-links li a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-text {
+  display: none;
+}
+
+.main_info {
+  margin-bottom: 5rem;
+  padding: 0 3rem;
+}
+
+.desktop-only {
+  display: none
+}
+}
+/* Small Screens End */
+
+/* BELOW TO FIX TO FIX TO FIX TO FIX BELOW */
+
+
+/* ##### MAIN INFO ##### */
+
+/* https://jsfiddle.net/p0Lygk37/1/
+For learning event handlers */
+
+/*
+Links:
+Github
+Linkedin
+HackerRank
+Youtube ???

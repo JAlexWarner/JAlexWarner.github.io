@@ -42,6 +42,20 @@ fetch('nav.html')
         oldelem.parentNode.replaceChild(newelem,oldelem);
       }
     }
+
+    document.querySelector(".nav-bar")?.addEventListener("mouseover", function() {
+      if (document.body.classList.contains("dark-mode")){
+        console.log("Great Success (mouseenter)");
+        document.body.classList.add("dark-mode-nav-hover");
+      }
+    })
+
+    document.querySelector(".nav-bar")?.addEventListener("mouseout", function() {
+      if (document.body.classList.contains("dark-mode")){
+        console.log("Great Success (mouseleave)");
+        document.body.classList.remove("dark-mode-nav-hover");
+      }
+    })
 })
 
 fetch("common_header.html")
@@ -71,3 +85,6 @@ fetch("common_header.html")
 //   toggle_elem?.classList.replace("bx-lg", "bx-sm");
 //   console.log(toggle_elem);
 // }
+
+console.log(document.querySelector(".nav-bar"));
+

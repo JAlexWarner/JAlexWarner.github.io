@@ -20,6 +20,7 @@ document.getElementsByTagName('head')[0].appendChild(styles_link);
 fetch('nav.html')
     .then(res => res.text())
     .then(text => {
+    var _a, _b;
     let oldelem = document.getElementById("replace-with-navbar");
     let newelem = document.createElement("div");
     newelem.innerHTML = text;
@@ -35,6 +36,18 @@ fetch('nav.html')
             oldelem.parentNode.replaceChild(newelem, oldelem);
         }
     }
+    (_a = document.querySelector(".nav-bar")) === null || _a === void 0 ? void 0 : _a.addEventListener("mouseover", function () {
+        if (document.body.classList.contains("dark-mode")) {
+            console.log("Great Success (mouseenter)");
+            document.body.classList.add("dark-mode-nav-hover");
+        }
+    });
+    (_b = document.querySelector(".nav-bar")) === null || _b === void 0 ? void 0 : _b.addEventListener("mouseout", function () {
+        if (document.body.classList.contains("dark-mode")) {
+            console.log("Great Success (mouseleave)");
+            document.body.classList.remove("dark-mode-nav-hover");
+        }
+    });
 });
 fetch("common_header.html")
     .then(res => res.text())
@@ -61,4 +74,5 @@ fetch("common_header.html")
 //   toggle_elem?.classList.replace("bx-lg", "bx-sm");
 //   console.log(toggle_elem);
 // }
+console.log(document.querySelector(".nav-bar"));
 //# sourceMappingURL=index.js.map

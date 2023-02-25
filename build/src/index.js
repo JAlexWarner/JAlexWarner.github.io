@@ -4,6 +4,12 @@ let link_text_array = Array.from(document.querySelectorAll("link-text"));
 let link_text_lengths = link_text_array.map(x => x.textContent ? x.textContent.length : 0);
 function toggleDark() {
     document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+        document.documentElement.style.setProperty("--bg-color", "#262626");
+    }
+    else {
+        document.documentElement.style.setProperty("--bg-color", "white");
+    }
 }
 const boxicon_link = document.createElement('link');
 boxicon_link.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css';
@@ -36,16 +42,24 @@ fetch('nav.html')
             oldelem.parentNode.replaceChild(newelem, oldelem);
         }
     }
-    (_a = document.querySelector(".nav-bar")) === null || _a === void 0 ? void 0 : _a.addEventListener("mouseover", function () {
+    var navGradientDiv = document.createElement("div");
+    navGradientDiv.classList.add("gradient-glow");
+    let refNode = document.querySelector(".nav-bar");
+    console.log(refNode === null || refNode === void 0 ? void 0 : refNode.nextSibling);
+    if ((refNode === null || refNode === void 0 ? void 0 : refNode.nextSibling) != null) {
+        document.body.insertBefore(navGradientDiv, refNode === null || refNode === void 0 ? void 0 : refNode.nextSibling);
+    }
+    else {
+        throw Error("Couldn't find nav-bar's next sibling");
+    }
+    (_a = document.querySelector(".nav-bar")) === null || _a === void 0 ? void 0 : _a.addEventListener("mouseenter", function () {
         if (document.body.classList.contains("dark-mode")) {
             console.log("Great Success (mouseenter)");
-            document.body.classList.add("dark-mode-nav-hover");
         }
     });
-    (_b = document.querySelector(".nav-bar")) === null || _b === void 0 ? void 0 : _b.addEventListener("mouseout", function () {
+    (_b = document.querySelector(".nav-bar")) === null || _b === void 0 ? void 0 : _b.addEventListener("mouseleave", function () {
         if (document.body.classList.contains("dark-mode")) {
             console.log("Great Success (mouseleave)");
-            document.body.classList.remove("dark-mode-nav-hover");
         }
     });
 });
@@ -68,11 +82,14 @@ fetch("common_header.html")
         }
     }
 });
-// if (window.matchMedia("only screen and (max-width: 600px)")){
-//   console.log("Great Success");
-//   var toggle_elem = document.getElementById("toggle-icon")
-//   toggle_elem?.classList.replace("bx-lg", "bx-sm");
-//   console.log(toggle_elem);
-// }
-console.log(document.querySelector(".nav-bar"));
+window.onload = () => {
+    // var navGradientDiv = document.createElement("div");
+    // navGradientDiv.classList.add("gradient-glow");
+    // let refNode = document.querySelector("nav-bar");
+    // if (refNode?.nextSibling) {
+    //   document.body.insertBefore(navGradientDiv, refNode?.nextSibling);
+    // } else {
+    //   throw Error("Couldn't find nav-bar's next sibling");
+    // }
+};
 //# sourceMappingURL=index.js.map

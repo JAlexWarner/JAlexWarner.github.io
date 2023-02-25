@@ -5,6 +5,11 @@ let link_text_lengths = link_text_array.map(x => x.textContent? x.textContent.le
 
 function toggleDark() {
   document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    document.documentElement.style.setProperty("--bg-color", "#262626");
+  } else {
+    document.documentElement.style.setProperty("--bg-color", "white");
+  }
 }
 
 const boxicon_link = document.createElement('link');
@@ -43,17 +48,26 @@ fetch('nav.html')
       }
     }
 
-    document.querySelector(".nav-bar")?.addEventListener("mouseover", function() {
+    var navGradientDiv = document.createElement("div");
+    navGradientDiv.classList.add("gradient-glow");
+    let refNode = document.querySelector(".nav-bar");
+
+    console.log(refNode?.nextSibling);
+    if (refNode?.nextSibling != null) {
+      document.body.insertBefore(navGradientDiv, refNode?.nextSibling);
+    } else {
+      throw Error("Couldn't find nav-bar's next sibling");
+    }
+
+    document.querySelector(".nav-bar")?.addEventListener("mouseenter", function() {
       if (document.body.classList.contains("dark-mode")){
         console.log("Great Success (mouseenter)");
-        document.body.classList.add("dark-mode-nav-hover");
       }
     })
 
-    document.querySelector(".nav-bar")?.addEventListener("mouseout", function() {
+    document.querySelector(".nav-bar")?.addEventListener("mouseleave", function() {
       if (document.body.classList.contains("dark-mode")){
         console.log("Great Success (mouseleave)");
-        document.body.classList.remove("dark-mode-nav-hover");
       }
     })
 })
@@ -79,12 +93,14 @@ fetch("common_header.html")
   }
 })
 
-// if (window.matchMedia("only screen and (max-width: 600px)")){
-//   console.log("Great Success");
-//   var toggle_elem = document.getElementById("toggle-icon")
-//   toggle_elem?.classList.replace("bx-lg", "bx-sm");
-//   console.log(toggle_elem);
+window.onload = () => {
+// var navGradientDiv = document.createElement("div");
+// navGradientDiv.classList.add("gradient-glow");
+// let refNode = document.querySelector("nav-bar");
+
+// if (refNode?.nextSibling) {
+//   document.body.insertBefore(navGradientDiv, refNode?.nextSibling);
+// } else {
+//   throw Error("Couldn't find nav-bar's next sibling");
 // }
-
-console.log(document.querySelector(".nav-bar"));
-
+};

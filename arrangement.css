@@ -1,6 +1,7 @@
 /* ##### NAVIGATION BAR ##### */
 .nav-bar {
-  background-color: #2EB0A5;
+  /* background-color: #2EB0A5; */
+  /* background-color: var(--current_nav-color); */
   z-index: 999;
   overflow: hidden;
 }
@@ -15,8 +16,18 @@
 
 #about-section {
   margin-bottom: 5rem;
-  /* height: 30rem; 
-  width: 60rem;  */
+  margin-left: auto;
+  margin-right: auto;
+  width: 80rem;
+}
+
+.portfolio-slideshow {
+  margin: 5rem 0;
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-bottom: 10rem; */
 }
 
 /* Large Screens Start */
@@ -71,7 +82,6 @@
 }
 
 .nav-link {
-  /* border: 2px dashed purple; */
   display: flex;
   flex-direction: row;
   height: 2rem;
@@ -122,7 +132,9 @@
   display: grid;
   height: 10rem;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  /* gap: 1rem; */
+  margin-bottom: 1rem;
+  padding: 0rem 5rem 4rem 5rem;
 }
 
 .main-grid-item {
@@ -131,12 +143,20 @@
 
 .links-info {
   display: grid;
+  /* border: .5 solid var(--current-nav-color);
+  border-top: none;
+  border-bottom: none;
+  border-left: none; */
 }
 
 .contact-info {
   display: grid;
   grid-template-rows: min-content auto;
   padding: 0rem 2rem;
+  /* border: .5px solid var(--current-nav-color);
+  border-top: none;
+  border-bottom: none;
+  border-right: none; */
 }
 }
 /* Large Screens End */

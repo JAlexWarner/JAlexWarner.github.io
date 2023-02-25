@@ -1,14 +1,17 @@
 "use strict";
 // NOTE: Look more into ARIA when we feel confident in all the tabs
-let link_text_array = Array.from(document.querySelectorAll("link-text"));
-let link_text_lengths = link_text_array.map(x => x.textContent ? x.textContent.length : 0);
+// NOTE For self: When trying to figure out LOC of JavaScript, 
+//      remember everything we simplified later
 function toggleDark() {
     document.body.classList.toggle("dark-mode");
     if (document.body.classList.contains("dark-mode")) {
+        // document.documentElement.style.setProperty("--bg-color", "#9300ff");
         document.documentElement.style.setProperty("--bg-color", "#262626");
+        document.documentElement.style.setProperty("--current-nav-color", "#9300ff");
     }
     else {
         document.documentElement.style.setProperty("--bg-color", "white");
+        document.documentElement.style.setProperty("--current-nav-color", "#00d4ff");
     }
 }
 const boxicon_link = document.createElement('link');
@@ -53,14 +56,12 @@ fetch('nav.html')
         throw Error("Couldn't find nav-bar's next sibling");
     }
     (_a = document.querySelector(".nav-bar")) === null || _a === void 0 ? void 0 : _a.addEventListener("mouseenter", function () {
-        if (document.body.classList.contains("dark-mode")) {
-            console.log("Great Success (mouseenter)");
-        }
+        console.log("Great Success (mouseenter)");
+        // if (document.body.classList.contains("dark-mode")){}
     });
     (_b = document.querySelector(".nav-bar")) === null || _b === void 0 ? void 0 : _b.addEventListener("mouseleave", function () {
-        if (document.body.classList.contains("dark-mode")) {
-            console.log("Great Success (mouseleave)");
-        }
+        console.log("Great Success (mouseleave)");
+        // if (document.body.classList.contains("dark-mode")){}
     });
 });
 fetch("common_header.html")
@@ -82,14 +83,4 @@ fetch("common_header.html")
         }
     }
 });
-window.onload = () => {
-    // var navGradientDiv = document.createElement("div");
-    // navGradientDiv.classList.add("gradient-glow");
-    // let refNode = document.querySelector("nav-bar");
-    // if (refNode?.nextSibling) {
-    //   document.body.insertBefore(navGradientDiv, refNode?.nextSibling);
-    // } else {
-    //   throw Error("Couldn't find nav-bar's next sibling");
-    // }
-};
 //# sourceMappingURL=index.js.map

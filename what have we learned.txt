@@ -34,6 +34,22 @@ const textAddEvent = new Event("textAdd", {
 
 var nav_bar_element = document.querySelector(".nav-bar");
 
+let link_text_array = Array.from(document.querySelectorAll("link-text"));
+// let link_text_lengths = link_text_array.map(x => x.textContent? x.textContent.length : 0);
+
 What we wanted to do above was grow the link text letter by letter.
+This looked pretty bad, so we then did an EventListener approach.
+I found a Jquery implementation, but I wanted to keep things to simple 
+JavaScript at the most when CSS didn't cut it.
+The JQuery approach just boiled down to making the width change over a time interval.
+I first realized JQuery is just Javascript when you want to save on 2 lines of code. /s
+Then I realized, it was just a transition on width for people who didn't understand CSS fully.
+So, I did a transition on the width of the link texts instead. It was beautiful.
+From JQuery -> JS Event Listeners -> 2 lines of CSS. It only took 3 hours.
 
 Let's leave a 1px or 5px border when we're testing something that affects dimensions
+
+Removing the scrollbar has been quite a pain in the bum.
+Will need to check on different browsers, but finding an up-to-date solution for Firefox is troublesome.
+https://stackoverflow.com/questions/20997183/how-to-hide-scrollbar-in-firefox
+

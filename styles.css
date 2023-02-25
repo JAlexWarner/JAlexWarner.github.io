@@ -4,6 +4,7 @@
   --faster-speed: .5s;
   --initial-nav-size: 5rem;
   --bg-color: white; /* #262626 */
+  --current-nav-color: #00d4ff;
 }
 
 @font-face {
@@ -24,18 +25,32 @@ body {
   margin: 0;
   font-family: "LeagueSpartan-Bold", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: white;
-  /* background-image: linear-gradient(90deg, #00d4ff 0%, white 70%); */
-  color: black
+  color: black;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+@-moz-document url-prefix() {
+  html {
+    scrollbar-width: none;
+  }
 }
 
 .dark-mode {
-  /* background-color: #262626; */
-  /* background-image: linear-gradient(90deg, #00d4ff 0%, #262626 10%); */
   color: white;
-}
-
-.dark-mode-nav-hover {
-  /* background-image: linear-gradient(90deg, #00d4ff 0%, #262626 17.5%); */
 }
 
 /*
@@ -43,12 +58,11 @@ Experimental
 */
 
 .gradient-glow {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   content: "";
-  /* background-image: linear-gradient(90deg, #00d4ff 0%, #262626 20%); */
-  background-image: linear-gradient(90deg, #00d4ff 0%, var(--bg-color) calc(0% + 10rem));
+  background-image: linear-gradient(90deg, var(--current-nav-color) 0%, var(--bg-color) calc(0% + 10rem));
   z-index: -1;
   opacity: 1;
 }
@@ -57,10 +71,10 @@ Experimental
   position: absolute;
   content: "";
   inset: 0;
-  background-image: linear-gradient(90deg, #00d4ff 0%, var(--bg-color) calc(0% + 20rem));
+  background-image: linear-gradient(90deg, var(--current-nav-color) 0%, var(--bg-color) calc(0% + 20rem));
   z-index: -2;
   opacity: 0;
-  transition: opacity 1.5s ease-in;
+  transition: opacity .9s ease-in;
 }
 
 .nav-bar:hover ~ .gradient-glow::before {
@@ -73,6 +87,20 @@ End Experiment
 
 .dark-text {
   color: white;
+}
+
+hr {
+  color: var(--current-nav-color);
+  /* padding-bottom: .25rem; */
+  width: 25%;
+  border-top: .16rem solid var(--current-nav-color);
+  position: relative;
+  bottom: .375rem;
+}
+
+.contact-list, .contact-list li {
+  list-style-type: none;
+  padding-bottom: .5rem;
 }
 
 .center {

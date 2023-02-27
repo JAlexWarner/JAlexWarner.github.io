@@ -121,5 +121,4 @@ else {
 }
 }
 
-
-// Call Hunter Mr. Dude next time he helps
+// Call Hunter Mr. Dude every time he helps

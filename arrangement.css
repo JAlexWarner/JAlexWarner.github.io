@@ -6,6 +6,14 @@
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover {
+  color: inherit;
+}
+
 .nav-bar:hover .link-icon {
   text-align: center;
 }
@@ -14,28 +22,7 @@
   list-style-type: none;
 }
 
-#about-section {
-  margin-bottom: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  width: 60rem;
-  padding: 1rem;
-  background: var(--bg-color);
-  /* border-style: solid; */
-  /* border-image: linear-gradient(orange, var(--current-nav-color), orange) 1 100%; */
-  border-radius: 1rem;
-}
 
-#about-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  background: linear-gradient(to right, var(--current-nav-color), orange);
-  margin: -.5rem;
-}
 
 .portfolio-slideshow {
   margin: 5rem 0;
@@ -67,7 +54,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid orange;
   width: 20rem;
   margin-left: auto;
   margin-right: auto;
@@ -81,6 +67,29 @@
 
 /* Large Screens Start */
 @media only screen and (min-width: 600px) {
+#about-section {
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 60rem;
+  padding: 1rem;
+  background: var(--bg-color);
+  /* border-style: solid; */
+  /* border-image: linear-gradient(orange, var(--current-nav-color), orange) 1 100%; */
+  border-radius: 1rem;
+  }
+  
+#about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(to right, var(--current-nav-color), orange);
+  margin: -.5rem;
+  }
+
 .nav-bar {
   position: fixed;
   height: 100%;
@@ -138,7 +147,7 @@
 }
 
 .nav-bar:hover .link-text {
-  flex-basis: 7.5rem; 
+  flex-basis: 8rem; 
   flex-shrink: 0;
   flex-grow: 0;
   transition: flex-basis var(--slower-speed) ease;
@@ -166,6 +175,8 @@
   padding: .375rem 0 0 0;
   align-items: center;
   text-align: left;
+  -webkit-animation: fadeOut var(--slower-speed) linear;
+  animation: fadeOut var(--slower-speed) linear ;
 }
 
 .main_info {
@@ -199,6 +210,7 @@
 }
 
 .nav-bar {
+  background: var(--bg-color);
   position: fixed;
   overflow: hidden;
   bottom: 0;
@@ -230,6 +242,10 @@
 .main_info {
   margin-bottom: 5rem;
   padding: 1.5rem 3rem;
+}
+
+.contact-info {
+  padding: 0;
 }
 
 .desktop-only {

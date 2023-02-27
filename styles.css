@@ -9,8 +9,14 @@
 
 @font-face {
   font-family: LeagueSpartan-Bold;
-  src: url("fonts/LeagueSpartan-Bold.otf") format("opentype");
+  src: url("fonts/itsown/LeagueSpartan-Bold.otf") format("opentype");
 }
+
+@font-face {
+  font-family: LeagueSpartan;
+  src: url("fonts/LeagueSpartan-Bold.ttf") format("truetype");
+}
+
 
 @-webkit-keyframes fadeIn {
   from { opacity: 0; }
@@ -21,9 +27,20 @@
     to { opacity: 1; }
 }
 
+@-webkit-keyframes fadeOut {
+  from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 body {
   margin: 0;
-  font-family: "LeagueSpartan-Bold", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "LeagueSpartan-Bold", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
   background-color: white;
   color: black;
   overflow: scroll;
@@ -97,8 +114,6 @@ hr {
   position: relative;
   bottom: .375rem;
 }
-
-
 
 .center {
   display: block;

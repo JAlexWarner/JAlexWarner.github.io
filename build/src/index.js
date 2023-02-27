@@ -2,16 +2,23 @@
 // NOTE: Look more into ARIA when we feel confident in all the tabs
 // NOTE For self: When trying to figure out LOC of JavaScript, 
 //      remember everything we simplified later
+function getCookie(name) {
+    var match = document.cookie.match(RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+    return match ? match[1] : null;
+}
 function toggleDark() {
     document.body.classList.toggle("dark-mode");
     if (document.body.classList.contains("dark-mode")) {
-        // document.documentElement.style.setProperty("--bg-color", "#9300ff");
+        // We make everything dark
         document.documentElement.style.setProperty("--bg-color", "#262626");
         document.documentElement.style.setProperty("--current-nav-color", "#9300ff");
+        document.cookie = "showLight=false; SameSite=None; Secure";
     }
     else {
+        // We make everything light
         document.documentElement.style.setProperty("--bg-color", "white");
         document.documentElement.style.setProperty("--current-nav-color", "#00d4ff");
+        document.cookie = "showLight=true; SameSite=None; Secure";
     }
 }
 const boxicon_link = document.createElement('link');
@@ -23,9 +30,13 @@ arrangement_link.rel = "stylesheet";
 const styles_link = document.createElement('link');
 styles_link.href = "styles.css";
 styles_link.rel = "stylesheet";
+const fa_link = document.createElement('script');
+fa_link.src = "https://kit.fontawesome.com/f7d489107a.js";
+fa_link.crossOrigin = "anonymous";
 document.getElementsByTagName('head')[0].appendChild(boxicon_link);
 document.getElementsByTagName('head')[0].appendChild(arrangement_link);
 document.getElementsByTagName('head')[0].appendChild(styles_link);
+document.getElementsByTagName('head')[0].appendChild(fa_link);
 fetch('nav.html')
     .then(res => res.text())
     .then(text => {
@@ -83,4 +94,19 @@ fetch("common_header.html")
         }
     }
 });
+var myValue = getCookie("showLight");
+if (myValue == null) {
+    document.cookie = "showLight=true";
+}
+else {
+    if (myValue == "true") {
+        // Leave Light Mode on
+    }
+    else {
+        window.onload = () => {
+            toggleDark();
+        };
+    }
+}
+// Call Hunter Mr. Dude next time he helps
 //# sourceMappingURL=index.js.map

@@ -18,7 +18,23 @@
   margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto;
-  width: 80rem;
+  position: relative;
+  width: 60rem;
+  padding: 1rem;
+  background: var(--bg-color);
+  /* border-style: solid; */
+  /* border-image: linear-gradient(orange, var(--current-nav-color), orange) 1 100%; */
+  border-radius: 1rem;
+}
+
+#about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(to right, var(--current-nav-color), orange);
+  margin: -.5rem;
 }
 
 .portfolio-slideshow {

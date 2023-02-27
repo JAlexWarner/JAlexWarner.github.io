@@ -98,10 +98,7 @@ hr {
   bottom: .375rem;
 }
 
-.contact-list, .contact-list li {
-  list-style-type: none;
-  padding-bottom: .5rem;
-}
+
 
 .center {
   display: block;

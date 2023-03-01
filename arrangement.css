@@ -1,7 +1,5 @@
 /* ##### NAVIGATION BAR ##### */
 .nav-bar {
-  /* background-color: #2EB0A5; */
-  /* background-color: var(--current_nav-color); */
   z-index: 999;
   overflow: hidden;
 }
@@ -187,11 +185,9 @@ a:link, a:visited, a:hover {
   display: grid;
   height: 10rem;
   grid-template-columns: 1fr 1fr;
-  /* gap: 1rem; */
   margin-bottom: 1rem;
   padding: 0rem 5rem 4rem 5rem;
 }
-
 }
 /* Large Screens End */
 
@@ -251,8 +247,6 @@ a:link, a:visited, a:hover {
 For learning event handlers */
 
 /*
-Links:
-Github
-Linkedin
-HackerRank
-Youtube ???
+Links to add:
+Instagram Singing
+Fiverr when we have that set up

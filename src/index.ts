@@ -14,12 +14,14 @@ function toggleDark() {
     document.documentElement.style.setProperty("--bg-color", "#262626");
     document.documentElement.style.setProperty("--current-nav-color", "#9300ff");
     document.documentElement.style.setProperty("--current-icon-filter", "invert(14%) sepia(100%) saturate(3993%) hue-rotate(272deg) brightness(98%) contrast(130%)");
+    document.documentElement.style.setProperty("--current-nav-complement", "#6cff00");
     document.cookie = "showLight=false; SameSite=None; Secure";
   } else {
     // We make everything light
     document.documentElement.style.setProperty("--bg-color", "white");
     document.documentElement.style.setProperty("--current-nav-color", "#00d4ff");
     document.documentElement.style.setProperty("--current-icon-filter", "invert(65%) sepia(63%) saturate(2518%) hue-rotate(149deg) brightness(101%) contrast(109%)");
+    document.documentElement.style.setProperty("--current-nav-complement", "#ff2b00");
     document.cookie = "showLight=true; SameSite=None; Secure";
   }
 }
@@ -87,14 +89,17 @@ fetch('html_replacements/nav.html')
 
     document.querySelector(".nav-bar")?.addEventListener("mouseenter", function() {
       console.log("Great Success (mouseenter)");
-      // if (document.body.classList.contains("dark-mode")){}
     })
 
     document.querySelector(".nav-bar")?.addEventListener("mouseleave", function() {
       console.log("Great Success (mouseleave)");
-      // if (document.body.classList.contains("dark-mode")){}
     })
-})
+
+    var page_name = window.location.pathname.split("/").pop()
+    var active_nav_link = document.querySelector(`[href='${page_name}']`);
+    active_nav_link?.classList.add("current-nav-item")
+    console.log(active_nav_link);
+  })  
 
 fetch("html_replacements/common_header.html")
 .then(res => res.text())

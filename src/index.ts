@@ -38,6 +38,16 @@ const fa_link = document.createElement('script');
 fa_link.src = "https://kit.fontawesome.com/f7d489107a.js";
 fa_link.crossOrigin = "anonymous"
 
+const meta_twitter = document.createElement('meta');
+meta_twitter.name = "twitter:image";
+meta_twitter.content = "assets/me_square.jpg";
+
+// const meta_og = document.createElement('meta');
+// meta_og.property = "og:image";
+// meta_og.content="assets/me_square.jpg";
+// Apparently property exists when doing HTML but not Typescript question mark?
+
+
 document.getElementsByTagName('head')[0].appendChild(boxicon_link);
 document.getElementsByTagName('head')[0].appendChild(arrangement_link);
 document.getElementsByTagName('head')[0].appendChild(styles_link);

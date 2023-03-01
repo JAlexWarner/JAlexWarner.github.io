@@ -1,3 +1,7 @@
+/* Stop auto-hover on load
+center contacts text
+highlight tab that's currently in use */
+
 :root {
   font-size: 16px;
   --slower-speed: 1s;
@@ -70,10 +74,6 @@ body::-webkit-scrollbar-thumb {
   color: white;
 }
 
-/*
-Experimental
-*/
-
 .gradient-glow {
   position: fixed;
   height: 100%;
@@ -98,12 +98,21 @@ Experimental
   opacity: 1;
 }
 
-/*
-End Experiment
-*/
-
 .dark-text {
   color: white;
+}
+
+.add-bg {
+  position: relative;
+}
+
+.add-bg::before {
+  content:"";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-color);
+  opacity: .3;
+  z-index: 999;
 }
 
 hr {

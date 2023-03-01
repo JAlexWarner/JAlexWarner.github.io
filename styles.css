@@ -9,6 +9,7 @@ highlight tab that's currently in use */
   --initial-nav-size: 5rem;
   --bg-color: white; /* #262626 */
   --current-nav-color: #00d4ff;
+  --current-icon-filter: invert(65%) sepia(63%) saturate(2518%) hue-rotate(149deg) brightness(101%) contrast(109%);
 }
 
 @font-face {
@@ -163,4 +164,22 @@ div img {
   transition: all .75s;
   -webkit-transition: all .75s;
   -moz-transition: all .75s;
+}
+
+.wyzant-icon {
+  position: relative;
+  height: 57px;
+  width: 75px;
+  padding-bottom: .5rem;
+}
+
+.wyzant-icon::before {
+  content: "";
+  background-image: url("assets/wyzant_black.png");
+  height: 57px;
+  width: 75px;
+  position: absolute;
+  inset: 0;
+  opacity: .7;
+  filter: var(--current-icon-filter);
 }

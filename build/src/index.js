@@ -12,12 +12,14 @@ function toggleDark() {
         // We make everything dark
         document.documentElement.style.setProperty("--bg-color", "#262626");
         document.documentElement.style.setProperty("--current-nav-color", "#9300ff");
+        document.documentElement.style.setProperty("--current-icon-filter", "invert(14%) sepia(100%) saturate(3993%) hue-rotate(272deg) brightness(98%) contrast(130%)");
         document.cookie = "showLight=false; SameSite=None; Secure";
     }
     else {
         // We make everything light
         document.documentElement.style.setProperty("--bg-color", "white");
         document.documentElement.style.setProperty("--current-nav-color", "#00d4ff");
+        document.documentElement.style.setProperty("--current-icon-filter", "invert(65%) sepia(63%) saturate(2518%) hue-rotate(149deg) brightness(101%) contrast(109%)");
         document.cookie = "showLight=true; SameSite=None; Secure";
     }
 }
@@ -33,11 +35,18 @@ styles_link.rel = "stylesheet";
 const fa_link = document.createElement('script');
 fa_link.src = "https://kit.fontawesome.com/f7d489107a.js";
 fa_link.crossOrigin = "anonymous";
+const meta_twitter = document.createElement('meta');
+meta_twitter.name = "twitter:image";
+meta_twitter.content = "assets/me_square.jpg";
+// const meta_og = document.createElement('meta');
+// meta_og.property = "og:image";
+// meta_og.content="assets/me_square.jpg";
+// Apparently property exists when doing HTML but not Typescript question mark?
 document.getElementsByTagName('head')[0].appendChild(boxicon_link);
 document.getElementsByTagName('head')[0].appendChild(arrangement_link);
 document.getElementsByTagName('head')[0].appendChild(styles_link);
 document.getElementsByTagName('head')[0].appendChild(fa_link);
-fetch('nav.html')
+fetch('html_replacements/nav.html')
     .then(res => res.text())
     .then(text => {
     var _a, _b;
@@ -59,7 +68,6 @@ fetch('nav.html')
     var navGradientDiv = document.createElement("div");
     navGradientDiv.classList.add("gradient-glow");
     let refNode = document.querySelector(".nav-bar");
-    console.log(refNode === null || refNode === void 0 ? void 0 : refNode.nextSibling);
     if ((refNode === null || refNode === void 0 ? void 0 : refNode.nextSibling) != null) {
         document.body.insertBefore(navGradientDiv, refNode === null || refNode === void 0 ? void 0 : refNode.nextSibling);
     }
@@ -75,7 +83,7 @@ fetch('nav.html')
         // if (document.body.classList.contains("dark-mode")){}
     });
 });
-fetch("common_header.html")
+fetch("html_replacements/common_header.html")
     .then(res => res.text())
     .then(text => {
     let oldelem = document.getElementById("replace-with-header");
@@ -88,6 +96,25 @@ fetch("common_header.html")
     else {
         if (oldelem.parentNode == null) {
             throw Error("Couldn't find parentNode of element with 'replace-with-header' id");
+        }
+        else {
+            oldelem.parentNode.replaceChild(newelem, oldelem);
+        }
+    }
+});
+fetch("html_replacements/common_footer.html")
+    .then(res => res.text())
+    .then(text => {
+    let oldelem = document.getElementById("replace-with-footer");
+    let newelem = document.createElement("div");
+    newelem.innerHTML = text;
+    newelem.classList.add("footer-grid-container");
+    if (oldelem == null) {
+        throw Error("Couldn't find element with 'replace-with-footer' id");
+    }
+    else {
+        if (oldelem.parentNode == null) {
+            throw Error("Couldn't find parentNode of element with 'replace-with-footer' id");
         }
         else {
             oldelem.parentNode.replaceChild(newelem, oldelem);
@@ -108,5 +135,5 @@ else {
         };
     }
 }
-// Call Hunter Mr. Dude next time he helps
+// Call Hunter Mr. Dude every time he helps
 //# sourceMappingURL=index.js.map

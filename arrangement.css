@@ -22,26 +22,26 @@ a:link, a:visited, a:hover {
   list-style-type: none;
 }
 
-
-
 .portfolio-slideshow {
   margin: 5rem 0;
   height: 12.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding-bottom: 10rem; */
 }
 
 .contact-list ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  padding-left: 0rem;
 }
 
 .contact-list, .contact-list li {
-  list-style-type: none;
-  padding-bottom: .5rem;
+  text-align: center;
+  display: inline-block;
+  padding: 0 0 .5rem 0;
 }
 
 .links-info {
@@ -110,7 +110,6 @@ a:link, a:visited, a:hover {
 }
 
 .nav-links {
-  /* border: 1px solid orange; */
   margin: 0;
   padding: 0;
   text-align: left;
@@ -120,12 +119,10 @@ a:link, a:visited, a:hover {
 }
 
 .nav-links li{
-  /* border: 1px solid blue; */
   padding: 0px 0px 1rem 0px;
 }
 
 .nav-links li a{
-  /* border: 1px solid black; */
   padding: 0px .5rem 0px .5rem;
   line-height: 1rem;
   text-decoration: none;
@@ -157,12 +154,10 @@ a:link, a:visited, a:hover {
 }
 
 .link-icon {
-  /* border: 1px solid white; */
   flex: 3.75rem 0 0;
 }
 
 .link-text {
-  /* border: 1.5px solid red;0 */
   display: flex;
   white-space: nowrap;
   overflow: hidden;
@@ -172,7 +167,7 @@ a:link, a:visited, a:hover {
   flex-grow: 0;
   transition: flex-basis var(--slower-speed) ease;
   height: 1.5rem;
-  padding: .375rem 0 0 0;
+  padding: .2rem 0 0 0;
   align-items: center;
   text-align: left;
   -webkit-animation: fadeOut var(--slower-speed) linear;
@@ -188,7 +183,7 @@ a:link, a:visited, a:hover {
   display: none;
 }
 
-.main-grid-container {
+.footer-grid-container {
   display: grid;
   height: 10rem;
   grid-template-columns: 1fr 1fr;
@@ -203,7 +198,6 @@ a:link, a:visited, a:hover {
 /* Small Screens Start */
 @media only screen and (max-width: 600px) {
 #initials {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -224,7 +218,6 @@ a:link, a:visited, a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* border: 1px solid black; */
   width: 100%;
   align-items: center;
   padding: 0.625rem 1rem 0 1rem;
@@ -253,11 +246,6 @@ a:link, a:visited, a:hover {
 }
 }
 /* Small Screens End */
-
-/* BELOW TO FIX TO FIX TO FIX TO FIX BELOW */
-
-
-/* ##### MAIN INFO ##### */
 
 /* https://jsfiddle.net/p0Lygk37/1/
 For learning event handlers */

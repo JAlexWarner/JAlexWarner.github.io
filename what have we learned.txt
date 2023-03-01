@@ -53,3 +53,10 @@ Removing the scrollbar has been quite a pain in the bum.
 Will need to check on different browsers, but finding an up-to-date solution for Firefox is troublesome.
 https://stackoverflow.com/questions/20997183/how-to-hide-scrollbar-in-firefox
 
+A few bugs came from divs inheriting properties from parent elements.
+
+Look into cleaning up CSS Files and how best to separate them.
+I badly want to separate the media queries into their own files but 
+I'm not sure if that's a best practice. For now, I'll just have
+arrangement.css open on both sides.
+

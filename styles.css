@@ -2,7 +2,7 @@
 
 :root {
   font-size: 16px;
-  --slower-speed: 1s;
+  --slower-speed: 1.1s;
   --faster-speed: .5s;
   --initial-nav-size: 5rem;
   --bg-color: white;
@@ -44,7 +44,8 @@ body {
   font-family: "LeagueSpartan-Bold", sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
-  background-color: white;
+  background-color: var(--bg-color);
+  /* background-color: white; */
   color: black;
   overflow: scroll;
   scrollbar-width: none;

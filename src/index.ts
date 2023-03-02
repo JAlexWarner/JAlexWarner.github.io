@@ -53,8 +53,8 @@ meta_twitter.content = "assets/me_square.jpg";
 // Leaving commented so I can figure out how to fix since this forces code reuse.
 
 document.getElementsByTagName('head')[0].appendChild(boxicon_link);
-document.getElementsByTagName('head')[0].appendChild(arrangement_link);
 document.getElementsByTagName('head')[0].appendChild(styles_link);
+document.getElementsByTagName('head')[0].appendChild(arrangement_link);
 document.getElementsByTagName('head')[0].appendChild(fa_link);
 
 fetch('html_replacements/nav.html')

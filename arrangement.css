@@ -18,6 +18,7 @@ a:link, a:visited, a:hover {
 
 .nav-links {
   list-style-type: none;
+  /* border: 1px solid white; */
 }
 
 .portfolio-slideshow {
@@ -97,7 +98,7 @@ a:link, a:visited, a:hover {
   display: flex;
   flex-direction: column;
   padding: 0 .625rem;
-  border: 1px solid orange 
+  /* border: 1px solid orange */
 }
 
 .nav-bar:hover {
@@ -140,20 +141,30 @@ a:link, a:visited, a:hover {
   flex-direction: row;
   height: 2rem;
   align-items: center;
+  /* border: 1px solid saddlebrown; */
+}
+
+.no-click {
+  flex-grow: 1;
+  /* border: 1px solid thistle; */
+  pointer-events: none;
+  height: 100%;
+  content: "";
+}
+
+.link-icon {
+  flex: 3.75rem 0 0;
 }
 
 .nav-bar:hover .link-text {
-  flex-basis: 8rem; 
+  /* flex-basis: 8rem;  */
+  flex-basis: content;
   flex-shrink: 0;
   flex-grow: 0;
   transition: flex-basis var(--slower-speed) ease;
   -webkit-animation: fadeIn var(--slower-speed) linear;
   animation: fadeIn var(--slower-speed) linear ;
   display: flex;
-}
-
-.link-icon {
-  flex: 3.75rem 0 0;
 }
 
 .link-text {
@@ -171,6 +182,7 @@ a:link, a:visited, a:hover {
   text-align: left;
   -webkit-animation: fadeOut var(--slower-speed) linear;
   animation: fadeOut var(--slower-speed) linear ;
+  /* border: 1px solid red; */
 }
 
 .main_info {
@@ -189,6 +201,14 @@ a:link, a:visited, a:hover {
   margin-bottom: 1rem;
   padding: 0rem 5rem 4rem 5rem;
 }
+
+#initials {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  /* border: 1px solid salmon; */
+}
+
 }
 /* Large Screens End */
 
@@ -196,12 +216,6 @@ a:link, a:visited, a:hover {
 @media only screen and (max-width: 600px) {
 .desktop-only {
   display: none;
-}
-
-#initials {
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
 }
 
 /* .nav-bar {
@@ -266,11 +280,19 @@ a:link, a:visited, a:hover {
 }
 
 .gradient-glow {
-  background-image: var(--bg-color);
+  z-index: -999;
+  background-image: none;
+  content: none;
+  opacity: 0;
+  background-color: var(bg-color);
 }
 
 .gradient-glow::before {
-  background-image: var(--bg-color);
+  z-index: -999;
+  background-image: none;
+  content: none;
+  opacity: 0;
+  background-color: var(bg-color);
 }
 }
 /* Small Screens End */

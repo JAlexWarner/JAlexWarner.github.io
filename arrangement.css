@@ -29,18 +29,24 @@ a:link, a:visited, a:hover {
   justify-content: center;
 }
 
+.contact-list {
+
+}
+
 .contact-list ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   padding-left: 0rem;
+  list-style-type: none;
 }
 
 .contact-list, .contact-list li {
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0 0 .5rem 0;
+  word-break: break-all;
 }
 
 .links-info {
@@ -52,16 +58,27 @@ a:link, a:visited, a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* justify-content: center; */
   justify-content: space-evenly;
-  width: 20rem;
+  max-width: 25rem;
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap;
+  border: 1px solid salmon;
 }
 
-.contact-info {
+.links-list-item {
+  flex: 1;
+}
+
+.footer-grid-item {
   display: grid;
   grid-template-rows: min-content auto;
-  padding: 0rem 2rem;
+  padding: 0rem 1rem;
+  max-width: 30rem;
+  min-width: 10rem;
+  flex: 1 1 0;
+  border: 1px solid white;
 }
 
 /* Large Screens Start */
@@ -71,7 +88,7 @@ a:link, a:visited, a:hover {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 60rem;
+  max-width: 60rem;
   padding: 1rem;
   background: var(--bg-color);
   /* border-style: solid; */
@@ -195,11 +212,16 @@ a:link, a:visited, a:hover {
 }
 
 .footer-grid-container {
-  display: grid;
-  height: 10rem;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   margin-bottom: 1rem;
-  padding: 0rem 5rem 4rem 5rem;
+  padding-bottom: 4rem;
+  flex-direction: row;
+  min-height: 10rem;
+  max-width: 60rem;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
 #initials {
@@ -218,16 +240,10 @@ a:link, a:visited, a:hover {
   display: none;
 }
 
-/* .nav-bar {
-  background: var(--bg-color);
-  position: fixed;
-  overflow: hidden;
-  bottom: 0;
-  height: 5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-} */
+.links-list {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .nav-links {
   display: flex;
@@ -252,7 +268,7 @@ a:link, a:visited, a:hover {
   padding: 1.5rem 3rem;
 }
 
-.contact-info {
+.footer-grid-item {
   padding: 0;
 }
 
@@ -279,19 +295,8 @@ a:link, a:visited, a:hover {
   border-bottom: 0px;
 }
 
-.gradient-glow {
-  z-index: -999;
+.gradient-glow, .gradient-glow::before {
   background-image: none;
-  content: none;
-  opacity: 0;
-  background-color: var(bg-color);
-}
-
-.gradient-glow::before {
-  z-index: -999;
-  background-image: none;
-  content: none;
-  opacity: 0;
   background-color: var(bg-color);
 }
 }

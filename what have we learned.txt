@@ -60,3 +60,8 @@ I badly want to separate the media queries into their own files but
 I'm not sure if that's a best practice. For now, I'll just have
 arrangement.css open on both sides.
 
+Oddly, I default my front-end thinking to Event Listeners. 
+Interestingly, though, I always find a way to do something simpler.
+Whenever I find Javascript implementations for complex things, I feel like
+90% of the time, there's a much better CSS solution. This leads to less
+Javascript bloat, but the CSS files are getting unwiedly.

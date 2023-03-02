@@ -29,10 +29,6 @@ a:link, a:visited, a:hover {
   justify-content: center;
 }
 
-.contact-list {
-
-}
-
 .contact-list ul {
   display: flex;
   flex-direction: column;
@@ -174,8 +170,8 @@ a:link, a:visited, a:hover {
 }
 
 .nav-bar:hover .link-text {
-  /* flex-basis: 8rem;  */
-  flex-basis: content;
+  flex-basis: 8rem; 
+  /* flex-basis: content; */
   flex-shrink: 0;
   flex-grow: 0;
   transition: flex-basis var(--slower-speed) ease;

@@ -60,7 +60,7 @@ a:link, a:visited, a:hover {
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
-  border: 1px solid salmon;
+  /* border: 1px solid salmon; */
 }
 
 .links-list-item {
@@ -74,7 +74,7 @@ a:link, a:visited, a:hover {
   max-width: 30rem;
   min-width: 10rem;
   flex: 1 1 0;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 /* Large Screens Start */
@@ -161,6 +161,7 @@ a:link, a:visited, a:hover {
   flex-grow: 1;
   /* border: 1px solid thistle; */
   pointer-events: none;
+  /* cursor: not-allowed; */
   height: 100%;
   content: "";
 }

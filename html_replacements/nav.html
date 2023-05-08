@@ -1,7 +1,7 @@
 <div id="initials">
     <p>JW</p>
 </div>
-<ul class="nav-links">
+<ul class="nav-links desktop-only">
     <li class="nav-item">
         <a href="index.html" class="nav-link">
             <div class="link-icon">
@@ -14,12 +14,12 @@
         </a>
     </li>
     <li class="nav-item">
-        <a href="data_science.html" class="nav-link">
+        <a href="software_dev.html" class="nav-link">
             <div class="link-icon">
-                <i class='bx bx-data bx-sm'></i>
+                <i class='bx bx-code-alt bx-sm' ></i>
             </div>
             <div class="link-text">
-                Data Science
+                Software Dev
             </div>
         </a>
     </li>
@@ -31,14 +31,15 @@
             <div class="link-text">
                 Tutoring
             </div>
-        </a></li>
+        </a>
+    </li>
     <li class="nav-item">
-        <a href="software_dev.html" class="nav-link">
+        <a href="data_science.html" class="nav-link">
             <div class="link-icon">
-                <i class='bx bx-code-alt bx-sm' ></i>
+                <i class='bx bx-data bx-sm'></i>
             </div>
             <div class="link-text">
-                Software Dev
+                Data Science
             </div>
         </a>
     </li>
@@ -76,3 +77,31 @@
         <i class='bx bxs-moon bx-lg' onclick="toggleDark()"></i>
     </li>
 </ul>
+
+<div class="mobile-navbar mobile-only">
+    <ul class="nav-links">
+        <li class="nav-item dark-toggle-box">
+            <a nav-link>
+                <i class='bx bxs-moon bx-sm' onclick="toggleDark()"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="index.html" class="nav-link">
+                <div class="link-icon">
+                    <i class='bx bxs-home-heart bx-sm'></i>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="hamburger-icon nav-link">
+                <div class="link-icon">
+                    <i class="fa-solid fa-burger"></i>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!-- Dark Mode Toggle - Home - Hamburger -->
+    <!-- Then tabs including home comes from off screen -->
+    <!-- figure out best practices -->
+    <!-- maybe do same pattern as vertical -->
+</div>

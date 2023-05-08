@@ -18,7 +18,6 @@ a:link, a:visited, a:hover {
 
 .nav-links {
   list-style-type: none;
-  /* border: 1px solid white; */
 }
 
 .portfolio-slideshow {
@@ -54,13 +53,11 @@ a:link, a:visited, a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: center; */
   justify-content: space-evenly;
   max-width: 25rem;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
-  /* border: 1px solid salmon; */
 }
 
 .links-list-item {
@@ -74,7 +71,6 @@ a:link, a:visited, a:hover {
   max-width: 30rem;
   min-width: 10rem;
   flex: 1 1 0;
-  /* border: 1px solid white; */
 }
 
 /* Large Screens Start */
@@ -154,12 +150,10 @@ a:link, a:visited, a:hover {
   flex-direction: row;
   height: 2rem;
   align-items: center;
-  /* border: 1px solid saddlebrown; */
 }
 
 .no-click {
   flex-grow: 1;
-  /* border: 1px solid thistle; */
   pointer-events: none;
   /* cursor: not-allowed; */
   height: 100%;
@@ -196,7 +190,6 @@ a:link, a:visited, a:hover {
   text-align: left;
   -webkit-animation: fadeOut var(--slower-speed) linear;
   animation: fadeOut var(--slower-speed) linear ;
-  /* border: 1px solid red; */
 }
 
 .main_info {
@@ -225,7 +218,6 @@ a:link, a:visited, a:hover {
   display: flex;
   align-items: center;
   padding: 0 1rem;
-  /* border: 1px solid salmon; */
 }
 
 }

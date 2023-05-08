@@ -64,7 +64,7 @@ fetch('html_replacements/nav.html')
     let newelem = document.createElement("div");
     newelem.innerHTML = text;
     newelem.classList.add("nav-bar");
-    newelem.classList.add("desktop-only");
+    // newelem.classList.add("desktop-only");
 
     if (oldelem == null){
       throw Error("Couldn't find element with 'replace-with-navbar' id");

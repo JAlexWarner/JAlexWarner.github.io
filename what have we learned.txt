@@ -65,3 +65,19 @@ Interestingly, though, I always find a way to do something simpler.
 Whenever I find Javascript implementations for complex things, I feel like
 90% of the time, there's a much better CSS solution. This leads to less
 Javascript bloat, but the CSS files are getting unwiedly.
+
+My way of automating the linking to CSS stylesheets was slower than doing 
+it manually. That's certainly never happened before. Back to manual.
+Got a little to used to frameworks being smart for me.
+
+July 12th Update:
+I think I want to finish this vanilla implementation. By that, I mean put
+in filler content for each of the pages and finish he mobile design.
+
+At some point, I want to do a full-stack application using Leptos.  
+
+July 31st:
+I should probably at least know the basics of grid if I ever plan to interview
+for front-end again.
+
+I'm forcing myself to parse a JSON file to dynamically population a text slider

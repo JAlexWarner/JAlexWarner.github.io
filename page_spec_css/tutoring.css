@@ -1,0 +1,58 @@
+#tutoring-main {
+    margin-top: 5rem;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid orange; */
+    
+}
+
+#review-slider {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tutoring-main p {
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid white; */
+    font-size: 2rem;
+}
+
+#subjects-grid {
+    width: 75%;
+    padding: 2rem 5rem;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 0 1rem;
+}
+
+#subjects-grid li {
+    list-style-type: none;
+    flex: 1 0 15rem;
+    height: 5rem;
+    /* border: 1px solid salmon; */
+    margin: 1rem;
+
+}
+
+.card {
+    border-radius: 0 10% 0;
+    background-color: var(--current-nav-color);
+    padding: 2rem;
+    margin: 1rem;
+    /* border: 1px solid yellow; */
+    height: 1rem;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#review-slider {
+
+}

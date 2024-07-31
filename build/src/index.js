@@ -21,7 +21,9 @@ function toggleDark() {
         document.documentElement.style.setProperty("--bg-color", "white");
         document.documentElement.style.setProperty("--current-nav-color", "#00d4ff");
         document.documentElement.style.setProperty("--current-icon-filter", "invert(65%) sepia(63%) saturate(2518%) hue-rotate(149deg) brightness(101%) contrast(109%)");
-        document.documentElement.style.setProperty("--current-nav-complement", "#ff2b00");
+        document.documentElement.style.setProperty("--current-nav-complement", "#f75331");
+        // #f07e67
+        // #ff2b00
         document.cookie = "showLight=true; SameSite=None; Secure";
     }
 }
@@ -141,5 +143,37 @@ else {
         };
     }
 }
+// function wyzantExpand() {
+//   let wyzant_tab = document.getElementById("wyzant-tab");
+//   let probono_tab = document.getElementById("probono-tab");
+//   let wyzant_text = document.getElementById("wyzant-text");
+//   let probono_text = document.getElementById("probono-text");
+//   if (wyzant_tab != null &&
+//     probono_tab != null &&
+//     wyzant_text != null &&
+//     probono_text != null) {
+//     console.log("Wyzant Expanding");
+//     wyzant_tab.style.flexBasis = "70rem";
+//     probono_tab.style.flexBasis = "0rem";
+//     wyzant_text.style.opacity = "1";
+//     probono_text.style.opacity = "0";
+//   }
+// }
+// function probonoExpand() {
+//   let wyzant_tab = document.getElementById("wyzant-tab");
+//   let probono_tab = document.getElementById("probono-tab");
+//   let wyzant_text = document.getElementById("wyzant-text");
+//   let probono_text = document.getElementById("probono-text");
+//   if (wyzant_tab != null &&
+//     probono_tab != null &&
+//     wyzant_text != null &&
+//     probono_text != null) {
+//     console.log("Pro Bono Expanding");
+//     wyzant_tab.style.flexBasis = "0rem";
+//     probono_tab.style.flexBasis = "70rem";
+//     wyzant_text.style.opacity = "0";
+//     probono_text.style.opacity = "1";
+//   }
+// }
 // Call Hunter Mr. Dude every time he helps
 //# sourceMappingURL=index.js.map

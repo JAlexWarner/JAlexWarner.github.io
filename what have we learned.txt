@@ -80,4 +80,10 @@ July 31st:
 I should probably at least know the basics of grid if I ever plan to interview
 for front-end again.
 
-I'm forcing myself to parse a JSON file to dynamically population a text slider
+I'm forcing myself to parse a JSON file to dynamically population a text slider.
+I'll figure out the industry standard later.
+
+Apparently, JSON.parse doesn't scale with large files in production. Luckily,
+this file will have 10 entries max.
+
+  

@@ -1,24 +1,35 @@
 #tutoring-main {
-    margin-top: 5rem;
-    padding-bottom: 10rem;
+    margin-top: 2.5rem;
+    padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
     /* border: 1px solid orange; */
 }
 
-#review-slider {
-    /* margin-left: auto;
-    margin-right: auto; */
+#reviews-list {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
     /* border: 1px solid green; */
+    justify-items: center;
 }
 
-#tutoring-main p {
+#reviews-list li {
+    list-style-type: none;
+    border-top: 1px solid var(--current-nav-color);
+    border-bottom: 1px solid var(--current-nav-color);
+    text-align: center;
+}
+
+#reviews-list li p:first-of-type {
+    font-size: 1.75rem;
+}
+
+.subjects-title {
     margin-left: auto;
     margin-right: auto;
     font-size: 2rem;
-}
-
-#review-slider {
 }
 
 #subjects-grid {
@@ -38,8 +49,7 @@
     border-radius: 0 10% 0;
     background-color: var(--current-nav-color);
     padding: 2rem;
-    /* border: 1px solid yellow; */
-    height: 1rem;
+    /* height: 1rem; */
     overflow: hidden;
     display: flex;
     align-items: center;
